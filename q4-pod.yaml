@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  namespace: kube-system
+  name: http
+spec:
+  containers:
+  - name: samplepods
+    args: ["-m", "http.server"]
+    image: chainguard/python:latest-dev
